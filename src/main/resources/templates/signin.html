@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout :: site-head">
+        <!-- Title -->
+        <title>Sign In - MyTicket</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+<body>
+    <!-- ##### Preloader ##### -->
+
+    <form th:action="@{/signup}" method="get">
+		<button class="btn btn-md btn-warning btn-block" type="Submit">Go To Sign up Page</button>
+	</form>	
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="circle-preloader">
+            <img src="img/core-img/compact-disc.png" alt="">
+        </div>
+    </div>
+    <header th:replace="layout :: site-header"></header>
+    
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay2" style="background-image: url(img/bg-img/breadcumb5.jpg);">
+        <div class="bradcumbContent">
+            <h2>Sign In</h2>
+        </div>
+    </div>
+    <!-- bg gradients -->
+    <div class="bg-gradients"></div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Sign up Area Start ##### -->
+    <section class="signup-area mt-30 section-padding-100-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <div class="signup-content mb-100">
+                            <!-- Sign up Form Area -->
+                            <div class="signup-form-area">
+                                <form th:action="@{/signin}" method="POST" class="form-signin">
+                                    <h3 class="form-signin-heading" th:text="Welcome"></h3>
+                                    <br/>
+                                    <label for="email">Email:</label>
+                                    <input type="text" id="email" name="email"  th:placeholder="Email"
+                                        class="form-control" /> <br/> 
+                                        <label for="password">Password:</label> 
+                                    <input type="password"  th:placeholder="Password"
+                                        id="password" name="password" class="form-control" /> <br /> 
+                                        
+                                    <div align="center" th:if="${param.error}">
+                                        <p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
+                                    </div>
+                                    <button class="btn btn-lg btn-primary btn-block" name="Submit" value="signin" type="Submit" th:text="signin">Signin</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ##### Sign up Area End ##### -->
+
+    <footer th:replace="layout :: site-footer"></footer>
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+</html>

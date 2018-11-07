@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "EventTicketsApp",
+                "projectName": "EventTicketsApp",
+                "workingDirectory": "c:\\Users\\karti\\Downloads\\EventTicketsApp-master\\EventTicketsApp-master",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "EventTicketsApp",
+                "projectName": "EventTicketsApp",
+                "workingDirectory": "c:\\Users\\karti\\Downloads\\EventTicketsApp-master\\EventTicketsApp-master",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
